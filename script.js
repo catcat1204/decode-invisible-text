@@ -1,4 +1,14 @@
-function decodeText() {
+function clearInput() {
+  document.getElementById("input").value = "";
+}
+function clearOutput() {
+  document.getElementById("output").value = "";
+}
+function copyOutput() {
+  document.getElementById("output").select();
+  document.execCommand("copy");
+}
+function submitInput() {
   const inputContent = document.getElementById("input").value;
   if (checkEncode(inputContent)) {
     document.getElementById("output").value = decode(inputContent);
