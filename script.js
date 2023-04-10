@@ -3,7 +3,8 @@ function decodeText() {
   if (checkEncode(inputContent)) {
     document.getElementById("output").value = decode(inputContent);
   } else {
-    document.getElementById("output").value = "Not encoded";
+    document.getElementById("output").placeholder =
+      "Đây không phải là tin nhắn được mã hóa";
   }
 }
 
